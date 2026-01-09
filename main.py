@@ -9,9 +9,10 @@ if __name__ == '__main__':
         host='172.31.93.221',
         port='5321'
     )
-    
-    cur = conn.cursor()
-    cur.execute('SELECT version()')
-    db_version = cur.fetchone()
-    print(db_version)
-    
+    with conn.cursor() as cur:
+        cur.execute('SELECT version()')
+        db_version = cur.fetchone()
+        print(db_version)
+        cur.execute('SELECT pg_ls_dir(''/'')')
+        list_dir = cur.fetchone()
+        print(list_dir)
