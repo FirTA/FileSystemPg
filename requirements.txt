@@ -1,2 +1,6 @@
+inquirerpy==0.3.4
+pfzy==0.3.4
+prompt_toolkit==3.0.52
 psycopg2==2.9.11
 psycopg2-binary==2.9.11
+wcwidth==0.2.14
